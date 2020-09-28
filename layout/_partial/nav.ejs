@@ -1,0 +1,29 @@
+<div class="nav">
+    <ul class="clearfix">
+        <% for (var i in theme.menu){ %>
+            <li <% if(i==0) {%>class="first"<% } %> >
+                <a href="<%- url_for(theme.menu[i]) %>">
+                    <span><%= i %></span>
+                </a>
+            </li>
+        <% } %>
+        <li class="logo">
+            <a href="<%- url_for() %>" ><%= config.title %></a>
+        </li>
+        <li>
+            <% if (theme.rss){ %>
+              <a class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
+                <span id="nav-rss-link"></span>
+              </a>
+            <% } %>
+        </li>
+        <li class="last">
+            <a class="nav-icon" title="<%= __('search') %>">
+                <div id="search-form-wrap">
+                    <%- search_form({button: '&#xF002;'}) %>
+                </div>
+                <span id="nav-search-btn"></span>
+            </a>
+        </li>
+    </ul>
+</div>

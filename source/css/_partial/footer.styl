@@ -1,0 +1,33 @@
+#footer
+  width: 100%
+  height: 74px
+  margin: 0 auto
+  max-width: 1920px
+  position: fixed
+  bottom: 0
+  z-index: 3
+  background-size: auto 74px
+  background: transparent url(footer-bg-url) top no-repeat
+  border-top: 1px solid color-border
+  color: color-grey
+  a
+    color: color-link
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  &:before, &:after
+    content: ""
+    display: block
+    position: absolute
+    top: -13px
+    width: 178px
+    height: 27px
+  &:before
+    background: url(footer-detail-left-url) no-repeat 0 0
+    left: 100px
+  &:after
+    background: url(footer-detail-left-url) no-repeat 0 0
+    right: 100px
+#footer-info
+  line-height: line-height
+  font-size: 0.85em
